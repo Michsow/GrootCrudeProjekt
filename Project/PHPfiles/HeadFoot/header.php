@@ -1,6 +1,6 @@
 <header>
         <div class="logo">
-             
+        <?php include "PHPfiles/connection.php" ?>     
         <?php
                               $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
 
