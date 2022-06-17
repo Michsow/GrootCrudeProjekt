@@ -14,6 +14,10 @@
   <body>
 <?php include "../PHPfiles/connection.php" ?>
 <?php include "HeadFoot/header.php" ?>
+  <main>
+    <div class="break">           
+
+    </div>
       <div>
         <div>
 
