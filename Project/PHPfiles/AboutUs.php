@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include "header.php" ?>
-    <?php include "footer.php" ?>
+    <?php include "HeadFoot/header.php" ?>
+    <div>
+        
+    </div>
+    <?php include "HeadFoot/footer.php" ?>
 </body>
 </html>

@@ -1,10 +1,6 @@
 <header>
         <div class="logo">
-        <?php
-                              $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
 
-                              foreach ($data as $row)
-            ?>
         </div>
         <nav>
             <div class="home">

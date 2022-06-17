@@ -10,12 +10,18 @@
 <body>
     <?php include "PHPfiles/connection.php" ?>     
     <?php include "PHPfiles/HeadFoot/header.php" ?>
+    <?php
+                              $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
+
+                              foreach ($data as $row)
+    ?>
     <main>
         <div class="break">           
 
         </div>
             <div class="images">
             <div class="slideshow-container">
+                
                 <div class="mySlides fade">
                   <img src="img/AmerykaNewYork.jpg" style="width:100%">
                   <div>€<?php echo $row ['Price'];?></div>

@@ -20,7 +20,6 @@
     </div>
       <div>
         <div>
-
           <div>
             <?php
                   $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
