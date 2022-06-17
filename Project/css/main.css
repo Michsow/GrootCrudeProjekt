@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body {
-    height: 57vw;
+    height: 754px;
     width: 100%;
     background-color: #FBF8EE;
     display: flex;
@@ -146,7 +146,7 @@ main{
     .text {font-size: 11px}
   }
   footer{
-      height: 600px;
+      height: 200px;
       width: 100%;
       background-color: #EB7E80 ;
   }

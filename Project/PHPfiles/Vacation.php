@@ -12,8 +12,12 @@
   </head>
 
   <body>
-<?php include "../PHPfiles/connection.php" ?>
-<?php include "../PHPfiles/header.php" ?>
+  <main>
+    <div class="break">           
+
+    </div>
+    <?php include "../PHPfiles/connection.php" ?>
+    <?php include "../PHPfiles/header.php" ?>
       <div>
         <div>
 
