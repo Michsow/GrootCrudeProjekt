@@ -8,6 +8,7 @@
     <title>CRUD(TriTaco)</title>
 </head>
 <body>
+    <?php include "PHPfiles/connection.php" ?>     
     <?php include "PHPfiles/HeadFoot/header.php" ?>
     <main>
         <div class="break">           
