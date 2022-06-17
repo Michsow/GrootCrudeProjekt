@@ -32,7 +32,7 @@
 <?php
 var_dump($_GET);
 $data = $conn->query("SELECT * FROM infolocaties WHERE LocationID=".$_GET['p'])->fetch();
-var_dump($data['ID']);
+var_dump($data['LocationID']);
 //foreach ($data as $row) {
   //echo $row ['titel']. " " .$row['artiest']. "<br >/\n";
 //}
@@ -60,4 +60,4 @@ var_dump($data['ID']);
 
 </body>
 
-</html>
+</html> 

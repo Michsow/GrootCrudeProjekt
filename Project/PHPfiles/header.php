@@ -2,25 +2,20 @@
         <div class="logo">
         <?php include "PHPfiles/connection.php" ?>     
         <?php
-            
-                  //$data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
-                  $data = $conn->query("SELECT * FROM infolocaties WHERE LocationID")->fetch();
-                  var_dump($data);
-                  
-                    $dataRow = $conn->query("SELECT LocationID FROM infolocaties")->fetch();
-                  var_dump($dataRow);
-                  foreach  ($dataRow as $row)
+                              $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
+
+                              foreach ($data as $row)
             ?>
         </div>
         <nav>
             <div class="home">
-                <button class="button">Home</button>
+                <button class="button"  onclick="document.location=''">Home</button>
             </div>
             <div class="vacation">
-                <button class="button">Vacation</button>
+                <button class="button" onclick="document.location='PHPfiles/Vacation.php'">Vacation</button>
             </div>
             <div class="about-us">
-                <button class="button">About Us</button>
+                <button class="button"  onclick="document.location=''">About Us</button>
             </div>
         </nav>
         <div class="search">
