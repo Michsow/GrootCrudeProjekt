@@ -16,11 +16,10 @@
 <?php include "HeadFoot/header.php" ?>
   <main>
     <div class="break">           
-
     </div>
-      <div>
-        <div>
-          <div>
+    <div class="break2">
+    </div>  
+          <div class="main-vacation">
             <?php
                   $data = $conn->query("SELECT * FROM infolocaties")->fetchAll();
 
@@ -29,8 +28,8 @@
                   //}
             ?>
             <div>
-              <div>
-                <img  src="../img/<?php echo $row ['Photo'];?>" alt="Card image cap">
+              <div class="centering">
+                <img  src="../img/<?php echo $row ['Photo'];?>" alt="Card image cap" class="img-vacation">
                 <div>
                   <p ><?php echo $row ['Name'];?></p>
                   <p >€<?php echo $row ['Price'];?></p>
@@ -45,8 +44,6 @@
             </div>
             <?php } ?>
           </div>
-        </div>
-      </div>
     </main>
     <?php include "HeadFoot/footer.php" ?>
 </body>

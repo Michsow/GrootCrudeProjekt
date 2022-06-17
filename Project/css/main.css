@@ -92,8 +92,8 @@ button:hover {
     cursor: pointer;
 }
 main{
-    width: 100%;
     height: 900px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,6 +102,10 @@ main{
     height: 5px;
     width: 100%;
     background-color: #d54753;
+}
+.break2{
+    height: 20px;
+    width: 100%;
 }
 .images{
     height: 600px;
@@ -149,4 +153,22 @@ main{
       height: 200px;
       width: 100%;
       background-color: #EB7E80 ;
+  }
+  .main-vacation{
+    height: 440px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .centering{
+    height: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-vacation{
+    height: 300px;
+    width: 78%;
   }
