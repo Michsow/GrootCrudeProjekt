@@ -13,7 +13,7 @@
 
   <body>
 <?php include "../PHPfiles/connection.php" ?>
-<?php include "../PHPfiles/header.php" ?>
+<?php include "HeadFoot/header.php" ?>
       <div>
         <div>
 
@@ -45,3 +45,5 @@
         </div>
       </div>
     </main>
+    <?php include "HeadFoot/footer.php" ?>
+</body>

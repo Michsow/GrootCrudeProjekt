@@ -8,7 +8,7 @@
     <title>CRUD(TriTaco)</title>
 </head>
 <body>
-    <?php include "PHPfiles/header.php" ?>
+    <?php include "PHPfiles/HeadFoot/header.php" ?>
     <main>
         <div class="break">           
 
@@ -42,9 +42,7 @@
                 </div>
         </div>
     </main>
-    <footer>
-
-    </footer>
+    <?php include "PHPfiles/HeadFoot/footer.php" ?>
 </body>
 <script src="js/image.js"></script>
 </html>
