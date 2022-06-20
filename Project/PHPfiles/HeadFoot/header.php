@@ -4,13 +4,13 @@
         </div>
         <nav>
             <div class="home">
-                <button class="button"  onclick="document.location='../index.php'">Home</button>
+                <button class="button"  onclick="document.location='index.php'">Home</button>
             </div>
             <div class="vacation">
-                <button class="button" onclick="document.location='PHPfiles/Vacation.php'">Vacation</button>
+                <button class="button" onclick="document.location='Vacation.php'">Vacation</button>
             </div>
             <div class="about-us">
-                <button class="button"  onclick="document.location='PHPfiles/AboutUs.php'">About Us</button>
+                <button class="button"  onclick="document.location='AboutUs.php'">About Us</button>
             </div>
         </nav>
         <div class="search">

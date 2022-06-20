@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="css/main.css"> 
 
     <title></title>
   </head>
 
   <body>
-<?php include "../PHPfiles/connection.php" ?>
-<?php include "HeadFoot/header.php" ?>
+<?php include "PHPfiles/connection.php" ?>
+<?php include "PHPfiles/HeadFoot/header.php" ?>
   <main>
     <div class="break">           
     </div>
@@ -29,7 +29,7 @@
             ?>
             <div>
               <div class="centering">
-                <img  src="../img/<?php echo $row ['Photo'];?>" alt="Card image cap" class="img-vacation">
+                <img  src="img/<?php echo $row ['Photo'];?>" alt="Card image cap" class="img-vacation">
                 <div>
                   <p ><?php echo $row ['Name'];?></p>
                   <p >€<?php echo $row ['Price'];?></p>
@@ -45,5 +45,5 @@
             <?php } ?>
           </div>
     </main>
-    <?php include "HeadFoot/footer.php" ?>
+    <?php include "PHPfiles/HeadFoot/footer.php" ?>
 </body>
