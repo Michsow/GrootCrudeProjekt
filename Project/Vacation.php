@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="stylesheet" href="css/main.css"> 
 
-    <title></title>
+    <title>TriTaco</title>
   </head>
 
   <body>
@@ -17,6 +17,32 @@
   <main>
     <div class="break">           
     </div>
+    <div class="search">
+            <div class="Search_block">
+
+            </div>
+            <?php 
+            if(isset($_POST['submit'])){
+                $str=mysql_real_escape_string($conn, $_POST['str']);
+                echo $sql="select * from infolocaties where title like '%str%' or   
+                details like '%str%'";
+                $res = mysql_query ($conn, $sql);
+                if(mysqli_num_rows($res)>0){
+                    while($row=mysqli_fetch_assoc($res)){
+                      echo $row['Name'];
+                      echo "<br></br>";
+                    }
+                }else {
+                    echo "No data found";
+                }
+            }
+            ?>
+
+            <form method="post">
+                <input type="textbox" placeholder="Search.." name="str" required/>
+                <button type="submit">Search</button>
+            </form>
+        </div>
     <div class="break2">
     </div>  
           <div class="main-vacation">
