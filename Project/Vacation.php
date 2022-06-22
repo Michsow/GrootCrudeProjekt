@@ -72,4 +72,3 @@
           </div>
     </main>
     <?php include "PHPfiles/HeadFoot/footer.php" ?>
-</body>

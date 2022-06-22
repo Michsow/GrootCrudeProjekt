@@ -13,5 +13,3 @@
         
     </div>
     <?php include "PHPfiles/HeadFoot/footer.php" ?>
-</body>
-</html>

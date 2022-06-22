@@ -50,6 +50,3 @@
         </div>
     </main>
     <?php include "PHPfiles/HeadFoot/footer.php" ?>
-</body>
-<script src="js/image.js"></script>
-</html>
