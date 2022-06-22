@@ -7,8 +7,8 @@ if($_SESSION['loggedin'] == true){
     header("Location: loginUser.php");
 }
 
-    var_dump($_GET['ID']);
-    $sql = "DELETE FROM album WHERE ID=:id;";
+    var_dump($_GET['LocationID']);
+    $sql = "DELETE FROM album WHERE LocationID=:id;";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $_GET['id']);
     $stmt->execute();

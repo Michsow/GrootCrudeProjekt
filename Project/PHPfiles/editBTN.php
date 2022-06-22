@@ -15,11 +15,11 @@ if(isset($_POST["submit"])){
               WHERE prijs = :prijs, 
               ";
       $stmt = $conn->prepare($sql);
-      $stmt->bindParam(':ID', $_POST['ID']);
-      $stmt->bindParam(':titel', $_POST['titel']);
-      $stmt->bindParam(':Text_Details', $_POST['Text_Details']);
-      $stmt->bindParam(':Ingredienten', $_POST['Ingredienten']);
-      $stmt->bindParam(':prijs', $_POST['prijs']);
+      $stmt->bindParam(':LocationID', $_POST['LocationID']);
+      $stmt->bindParam(':Data', $_POST['Data']);
+      $stmt->bindParam(':Name', $_POST['Name']);
+      $stmt->bindParam(':Price', $_POST['Price']);
+      $stmt->bindParam(':Photo', $_POST['Photo']);
       $stmt->execute();
       header("Location: admin1.php");
   }
@@ -27,10 +27,10 @@ if(isset($_POST["submit"])){
 ?>
 
 <form action="" method="post">
-        titel<input type="text" name="titel" id="" value="<?php echo $result["titel"] ?>"><br />
-        Text_Details<input type="text" name="Text_Details" id="" value="<?php echo $result["Text_Details"] ?>"><br />
-        Ingredienten<input type="text" name="Ingredienten" id="" value="<?php echo $result["Ingredienten"] ?>"><br />
-        prijs<input type="text" name="prijs" id="" value="<?php echo $result["prijs"] ?>"><br />
+        titel<input type="text" name="titel" id="" value="<?php echo $result["Data"] ?>"><br />
+        Text_Details<input type="text" name="Text_Details" id="" value="<?php echo $result["Name"] ?>"><br />
+        Ingredienten<input type="text" name="Ingredienten" id="" value="<?php echo $result["Price"] ?>"><br />
+        prijs<input type="text" name="prijs" id="" value="<?php echo $result["Photo"] ?>"><br />
         <input type="submit" name="submit" value="toevoegen">
 </form>
 
