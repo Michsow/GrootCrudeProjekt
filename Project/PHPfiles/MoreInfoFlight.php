@@ -6,26 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="../css/MIF.css">
     <title>TriTaco</title>
-
-    <!-- Bootstrap core CSS -->
-
-    <style>
-        details {
-          padding: 4px;
-          background-color: #eeeeee;
-          border: none;
-          box-shadow: 1px 1px 2px #bbbbbb;
-          cursor: pointer;
-        }
-
-        details > p {
-          background-color: #eeeeee;
-          padding: 4px;
-          margin: 0;
-          box-shadow: 1px 1px 2px #bbbbbb;
-        }
-  </style>
   </head>
   <body>
 <?php include "connection.php"?>
@@ -43,7 +25,7 @@ var_dump($data['LocationID']);
 <main class="mainP">
   <div>
       <div class="divPimg">
-        <img class="imgP" src="img/<?php echo $data ['Photo'];?>" >
+        <img class="imgP" src="../img/<?php echo $data ['Photo'];?>" >
       </div>
         <div class="columndivP">
             <div class="text">
