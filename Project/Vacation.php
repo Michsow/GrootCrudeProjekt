@@ -48,8 +48,8 @@
                   <p >€<?php echo $row ['Price'];?></p>
                   <div>
                     <div>
-                      <a href="product.php?p=<?php echo $row ['LocationID'];?>" class="btn btn-sm btn-outline-secondary">View</a>
-                      <a href="phpfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" class="btn btn-sm btn-outline-secondary" >Edit</a>
+                      <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" ">View</a>
+                      <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" >Edit</a>
                     </div>
                   </div>
                 </div>

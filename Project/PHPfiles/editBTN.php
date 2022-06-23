@@ -1,17 +1,17 @@
 <?php 
 include "connection.php";
-$sql = "SELECT * FROM album where id = ?";
+$sql = "SELECT * FROM infolocaties where LocationID = ?";
 $stmt = $conn->prepare($sql);
 $stmt->execute([$_GET['id']]);
 $result = $stmt->fetch();
 
 
 if(isset($_POST["submit"])){
-    $sql = "UPDATE album SET
+    $sql = "UPDATE infolocaties SET
                  ID = :ID,
-              titel = :titel, 
-              Text_Details = :Text_Details,
-              Ingredienten = :Ingredienten,
+                 Data = :Data, 
+                 Name = :Name,
+                 Price = :Price,
               WHERE prijs = :prijs, 
               ";
       $stmt = $conn->prepare($sql);

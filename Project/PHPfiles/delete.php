@@ -8,7 +8,7 @@ if($_SESSION['loggedin'] == true){
 }
 
     var_dump($_GET['LocationID']);
-    $sql = "DELETE FROM album WHERE LocationID=:id;";
+    $sql = "DELETE FROM infolocaties WHERE LocationID=:id;";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $_GET['id']);
     $stmt->execute();

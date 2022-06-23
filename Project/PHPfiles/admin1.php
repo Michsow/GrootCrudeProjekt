@@ -17,24 +17,24 @@ if(isset($_SESSION['UserName'])) {
     echo 'fout';
     header("Location: LoginUser.php");
 }
-$sql = "SELECT * FROM album";
+$sql = "SELECT * FROM infolocaties";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $result = $stmt->fetchAll();
 
 ?>
 
-<?php $data = $conn->query("SELECT * FROM album WHERE ID=".$_GET['p'])->fetch();
+<?php $data = $conn->query("SELECT * FROM infolocaties WHERE LocationID=".$_GET['p'])->fetch();
  { ?><br>
 
 <tr class="table1">
-<td class="row1"><?php echo $data["titel"]; ?> </td> <br>
-<td class="row2"><?php echo $data["Text_Details"]; ?> </td> <br>
-<td class="row3"><?php echo $data["Ingredienten"]; ?> </td> <br>
-<td class="row4"><?php echo $data["prijs"]; ?> </td> <br>
+<td class="row1"><?php echo $data["Name"]; ?> </td> <br>
+<td class="row2"><?php echo $data["Data"]; ?> </td> <br>
+<td class="row3"><?php echo $data["About"]; ?> </td> <br>
+<td class="row4">€<?php echo $data["Price"]; ?> </td> <br>
 </tr>
-<a href="editBTN.php?id=<?php echo $data["ID"]; ?>">edit</a>
-<a href="delete.php?id=<?php echo $data["ID"]; ?>">delete</a> <br>
+<a href="editBTN.php?id=<?php echo $data["LocationID"]; ?>">edit</a>
+<a href="delete.php?id=<?php echo $data["LocationID"]; ?>">delete</a> <br>
 <?php 
 }
 ?>
