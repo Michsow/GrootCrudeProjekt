@@ -10,10 +10,10 @@
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
+      <label for="uname"><b class="text2137">Username</b></label>
       <input type="text" placeholder="Enter Username" name="UserName" id="UserName" >
-
-      <label for="psw"><b>Password</b></label>
+      
+      <label for="psw"><b class="text2137">Password</b></label>
       <input type="password" placeholder="Enter Password" name="UserPassword" id="UserPassword" >
         
       <button type="submit">Login</button>

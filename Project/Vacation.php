@@ -1,7 +1,7 @@
 
 <?php include "PHPfiles/connection.php" ?>
 <?php include "PHPfiles/HeadFoot/header.php" ?>
-  <main>
+  <main class="main2">
     <div class="break">           
     </div>
     <div class="search">
