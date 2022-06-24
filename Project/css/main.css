@@ -299,7 +299,8 @@ span.psw {
     height: 94px;
     width: 300px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 .shoppingCartButton{
     position: relative;
@@ -318,4 +319,19 @@ span.psw {
 }
 .shoppingCartButton:hover {
   background-color: #d54753;
+}
+.divPimg{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.imgP{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+}
+.break4{
+  width: 3%;
+  height: 94px;
 }

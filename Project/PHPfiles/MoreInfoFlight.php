@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="stylesheet" href="../css/main.css">
     <title>TriTaco</title>
   </head>
@@ -57,7 +56,11 @@ var_dump($data['LocationID']);
         
         </div>
     </header>
-<main class="mainP">
+<main>
+<div class="break">           
+    </div>
+    <div class="break2">
+    </div> 
   <div>
       <div class="divPimg">
         <img class="imgP" src="../img/<?php echo $data ['Photo'];?>" >
@@ -78,6 +81,12 @@ var_dump($data['LocationID']);
   </div>
 
 </main>
+<footer>
+
+
+    <script src="../js/main.js"> </script>
+    <script scr="../js/JavaForm.js"></script>
+</footer>
 
 </body>
 

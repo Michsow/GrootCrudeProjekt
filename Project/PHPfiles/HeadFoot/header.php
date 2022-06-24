@@ -35,7 +35,7 @@
         <div class="shoppingCartDiv">
             
         <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
- 
+        <div class="break4"></div>
         <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
         <?php
         if(isset($_SESSION['cart'])){
