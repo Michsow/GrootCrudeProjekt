@@ -17,7 +17,7 @@ header{
     width: 80%;
     background-color: #FBF8EE;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .logo {
@@ -32,7 +32,6 @@ nav {
     height: 94px;
     width: 60%;
     background-color: #FBF8EE;
-    display: flex;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
@@ -50,7 +49,7 @@ nav {
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 4px 4px 0px 0px;
+    border-radius: 4px;
 }
 button:hover {
     background-color: #d54753;
@@ -150,7 +149,7 @@ main{
     .text {font-size: 11px}
   }
   footer{
-      height: 200px;
+      height: 50px;
       width: 100%;
       background-color: #EB7E80 ;
   }
@@ -185,11 +184,12 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #04AA6D;
-  color: white;
+  background-color: white;
+  color: #2d819d;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+  border-radius: 3px;
   cursor: pointer;
   width: 100%;
 }
@@ -202,7 +202,11 @@ button:hover {
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: #f44336;
+  background-color: #EB7E80;
+  color: #2d819d;
+}
+.cancelbtn:hover{
+  background-color: #d54753;
 }
 
 /* Center the image and position the close button */
@@ -292,7 +296,26 @@ span.psw {
   }
 }
 .shoppingCartDiv{
+    height: 94px;
     width: 300px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+.shoppingCartButton{
+    position: relative;
+    background-color: #FBF8EE;
+    border: none;
+    font-size: 14px;
+    color: #2d819d;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.shoppingCartButton:hover {
+  background-color: #d54753;
 }

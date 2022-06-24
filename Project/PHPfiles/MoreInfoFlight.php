@@ -7,7 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/MIF.css">
+    
+    <link rel="stylesheet" href="../css/main.css">
     <title>TriTaco</title>
   </head>
   <body>
@@ -22,7 +23,40 @@ var_dump($data['LocationID']);
 
 
 ?>
+<header>
+        <div class="logo">
 
+        </div>
+        <nav>
+            <div class="home">
+                <button class="button"  onclick="document.location='../index.php'">Home</button>
+            </div>
+            <div class="vacation">
+                <button class="button" onclick="document.location='../Vacation.php'">Vacation</button>
+            </div>
+            <div class="about-us">
+                <button class="button"  onclick="document.location='../AboutUs.php'">About Us</button>
+            </div>
+        </nav>
+       
+            
+        <div class="shoppingCartDiv">
+            
+        <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
+ 
+        <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
+        <?php
+        if(isset($_SESSION['cart'])){
+            $count = count($_SESSION['cart']);
+            echo "<span id=\'cart_count\'>$count</span>";
+        } else{
+            echo "<span id=\'cart_count\'>0</span>";
+        }
+        ?>
+        </button>
+        
+        </div>
+    </header>
 <main class="mainP">
   <div>
       <div class="divPimg">
