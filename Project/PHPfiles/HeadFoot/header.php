@@ -24,7 +24,6 @@
             <div class="about-us">
                 <button class="button"  onclick="document.location='AboutUs.php'">About Us</button>
             </div>
-
         </nav>
         <div class="Login">
             <a href="#LogIn"><?php include "PHPfiles/Form.php" ?></a>
@@ -36,7 +35,17 @@
         <div class="shoppingCartDiv">
             
         <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
-        <button class="shoppingCartButton" style="width:100px;">Chosen Flights<span id="cart_count"> 0</span></button>
+ 
+        <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
+        <?php
+        if(isset($_SESSION['cart'])){
+            $count = count($_SESSION['cart']);
+            echo "<span id=\'cart_count\'>$count</span>";
+        } else{
+            echo "<span id=\'cart_count\'>0</span>";
+        }
+        ?>
+        </button>
         
         </div>
     </header>
