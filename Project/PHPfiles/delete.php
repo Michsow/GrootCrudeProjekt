@@ -14,4 +14,4 @@ if($_SESSION['loggedin'] == true){
     $stmt->execute();
     header('Location: admin1.php');
 
-?> 
+?>

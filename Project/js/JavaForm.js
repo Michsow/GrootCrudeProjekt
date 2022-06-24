@@ -23,6 +23,4 @@ const FormElement = document.querySelector('#loginun');
       else{
           
       }
-
-      console.log('halloJavaForm');
   });

@@ -291,3 +291,8 @@ span.psw {
      width: 100%;
   }
 }
+.shoppingCartDiv{
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
