@@ -1,6 +1,21 @@
 <?php
-include "PHPfiles/connection.php"
-$db = new CreateDb("Productdb", "Producttb");
+include "connection.php"
+?>
+<?php
+    $servername = "localhost";
+    $LocationID = "id";
+    $Name = "name";
+    $Price = "price";
+    $Photo = "photo";
+
+    try { 
+        $conn2 = new PDO2("mysql:host=$servername;dbname=tritacosql", $LocationID, $Name, $Price, $Photo);
+        $conn2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+      } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+      }
+      
 
 if (isset($_POST['remove'])){
   if ($_GET['action'] == 'remove'){
@@ -11,7 +26,7 @@ if (isset($_POST['remove'])){
               echo "<script>window.location = 'cart.php'</script>";
           }
       }
-  }
+   }
 }
 
 
@@ -33,10 +48,10 @@ if (isset($_POST['remove'])){
     require_once ('php/header.php');
 ?>
 
-<div class="container-fluid">
-    <div class="row px-5">
-        <div class="col-md-7">
-            <div class="shopping-cart">
+<div class="">
+    <div class="">
+        <div class="">
+            <div class="">
                 <h6>My Cart</h6>
                 <hr>
 
@@ -44,14 +59,14 @@ if (isset($_POST['remove'])){
 
                 $total = 0;
                     if (isset($_SESSION['cart'])){
-                        $product_id = array_column($_SESSION['cart'], 'product_id');
+                        $product_id = array_column($_SESSION['cart'], 'LocationID');
 
                         $result = $db->getData();
                         while ($row = mysqli_fetch_assoc($result)){
                             foreach ($product_id as $id){
                                 if ($row['id'] == $id){
-                                    cartElement($row['product_image'], $row['product_name'],$row['product_price'], $row['id']);
-                                    $total = $total + (int)$row['product_price'];
+                                    cartElement($row['Photo'], $row['Name'],$row['Price'], $row['LocationID']);
+                                    $total = $total + (int)$row['Price'];
                                 }
                             }
                         }
@@ -68,7 +83,7 @@ if (isset($_POST['remove'])){
             <div class="pt-4">
                 <h6>PRICE DETAILS</h6>
                 <hr>
-                <div class="row price-details">
+                <div class="">
                     <div class="col-md-6">
                         <?php
                             if (isset($_SESSION['cart'])){
@@ -78,13 +93,11 @@ if (isset($_POST['remove'])){
                                 echo "<h6>Price (0 items)</h6>";
                             }
                         ?>
-                        <h6>Delivery Charges</h6>
                         <hr>
                         <h6>Amount Payable</h6>
                     </div>
                     <div class="col-md-6">
                         <h6>$<?php echo $total; ?></h6>
-                        <h6 class="text-success">FREE</h6>
                         <hr>
                         <h6>$<?php
                             echo $total;
