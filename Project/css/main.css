@@ -91,7 +91,7 @@ button:hover {
     cursor: pointer;
 }
 main{
-  height: 1440px;
+  height: 1395px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -341,4 +341,32 @@ span.psw {
 }
 .text2137{
   text-decoration:none;  
+}
+.main-aboutus{
+  height: 1370px;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.bedrijf-foto{
+  height: 400px;
+  width: 25%;
+  background-image: url(../img/Shop.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.info-1{
+  height: 400px;
+  width: 45%;
+  text-align: left;
+}
+.bedrijf-foto2{
+  height: 1000px;
+  width: 100%;
+  background-image: url(../img/Shop2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
