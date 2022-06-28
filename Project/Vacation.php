@@ -6,29 +6,11 @@
     </div>
     <div class="search">
             <div class="Search_block">
-
+              <form method="post"> 
+              <label>Search</label>
+              <input type="text" name="search">
+              <input type="submit" name="submit" class = "button">
             </div>
-            <?php 
-            if(isset($_POST['submit'])){
-                $str=mysql_real_escape_string($conn, $_POST['str']);
-                echo $sql="select * from infolocaties where title like '%str%' or   
-                details like '%str%'";
-                $res = mysql_query ($conn, $sql);
-                if(mysqli_num_rows($res)>0){
-                    while($row=mysqli_fetch_assoc($res)){
-                      echo $row['Name'];
-                      echo "<br></br>";
-                    }
-                }else {
-                    echo "No data found";
-                }
-            }
-            ?>
-
-            <form method="post">
-                <input type="textbox" placeholder="Search.." name="str" required/>
-                <button type="submit">Search</button>
-            </form>
         </div>
     <div class="break2">
     </div>  
@@ -59,3 +41,40 @@
           </div>
     </main>
     <?php include "PHPfiles/HeadFoot/footer.php" ?>
+<?php
+$con = new PDO("mysql:host=localhost;dbname=tritacosql",'root','');
+
+if (isset($_POST["submit"])) {
+	$str = $_POST["search"];
+	$sth = $con->prepare("SELECT * FROM `infolocaties` WHERE Name = '$str'");
+
+	$sth->setFetchMode(PDO:: FETCH_OBJ);
+	$sth -> execute();
+
+	if($row = $sth->fetch())
+	{
+		?>
+		<br><br><br>
+		<table>
+			<tr>
+				<th>Name</th>
+        <th>About</th>
+			</tr>
+			<tr>
+				<td><?php echo $row->Name; ?></td>
+        <td><?php echo $row->About;?></td>
+			</tr>
+
+		</table>
+<?php 
+	}
+		
+		
+		else {
+			echo "Name Does not exist";
+		}
+
+
+  }
+
+?>

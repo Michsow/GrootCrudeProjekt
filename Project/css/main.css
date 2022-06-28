@@ -3,7 +3,7 @@
     padding: 0px;
 }
 body {
-  height: 1540px;
+  height: 1945px;
   width: 100%;
   background-color: #FBF8EE;
   display: flex;
@@ -54,11 +54,6 @@ nav {
 button:hover {
     background-color: #d54753;
 }
-.Search_block{
-    height: 80px;
-    width: 100%;
-    background-color: #d54753;
-}
 .search{
     height: 94px;
     width: 30%;  
@@ -66,10 +61,12 @@ button:hover {
     align-items: center;
     flex-direction: column;
 }
-.Search_block{
+.Search-block{
     height: 60px;
     width: 100%;
     background-color: #FBF8EE;
+    display: flex;
+
 }
 #text {
     height: 30px;
@@ -91,7 +88,7 @@ button:hover {
     cursor: pointer;
 }
 main{
-  height: 1395px;
+  height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -148,10 +145,15 @@ main{
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
-  footer{
+  footer {
       height: 50px;
       width: 100%;
       background-color: #EB7E80 ;
+      position: relative;
+      position: fixed;
+      padding: 10px 10px 0px 10px;
+      bottom: 0;
+      
   }
   .main-vacation{
     height: 482px;
@@ -369,4 +371,11 @@ span.psw {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+.form {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-content: space-around;
+  align-items: center;
 }
