@@ -1,7 +1,7 @@
 
 
-    <?php include "PHPfiles/HeadFoot/header.php" ?>
-    <div>
-        
-    </div>
-    <?php include "PHPfiles/HeadFoot/footer.php" ?>
+<?php include "PHPfiles/HeadFoot/header.php" ?>
+<main>
+
+</main>
+<?php include "PHPfiles/HeadFoot/footer.php" ?>
