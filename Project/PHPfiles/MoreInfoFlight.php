@@ -44,7 +44,7 @@ var_dump($data['LocationID']);
             
         <div class="shoppingCartDiv">
             
-        <i class="fa fa-plane" style="font-size:68px;" aria-hidden="true"></i>
+        <i class="fa-solid fa-plane-departure" style="font-size:68px;" aria-hidden="true"></i>
  
         <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
         <?php

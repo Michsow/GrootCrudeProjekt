@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
             <a href="PHPfiles/Mijnaccount.php"> <button> Mijn account </button> </a>
         <div class="shoppingCartDiv">
             
-        <i class="fa fa-plane" style="font-size:68px;" aria-hidden="true"></i>
+        <i class="fa-solid fa-plane-departure" style="font-size:68px;" aria-hidden="true"></i>
         <div class="break4"></div>
         <button class="shoppingCartButton" style="width:100px;"><a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/PHPfiles/bookedFlights.php" class="text">Booked flights</a></button>
         </div>
