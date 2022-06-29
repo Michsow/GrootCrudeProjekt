@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <title>TriTaco</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +44,7 @@ var_dump($data['LocationID']);
             
         <div class="shoppingCartDiv">
             
-        <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
+        <i class="fa fa-plane" style="font-size:68px;" aria-hidden="true"></i>
  
         <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
         <?php
@@ -76,8 +76,7 @@ var_dump($data['LocationID']);
               <p> € <?php echo $data['Price'] ?>  <p>
                 
               <p class="card" name="add"><button>Add to Cart
-              <i class="fa fa-shopping-cart" style="font-size:30px;" aria-hidden="true"></i></button> </p>
-       
+              <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </p>
             </div>
         </div>
   </div>
