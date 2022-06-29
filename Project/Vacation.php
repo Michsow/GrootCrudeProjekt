@@ -30,8 +30,9 @@ if (isset($_POST["submit"])) {
 			</tr>
 			<tr>
 				<td><?php echo $row->Name; ?></td>
+        <td>€<?php echo $row->Price; ?></td>
 			</tr>
-
+      <div>  </div>
 		</table>
 <?php 
 	}
@@ -64,7 +65,7 @@ if (isset($_POST["submit"])) {
                   <p >€<?php echo $row ['Price'];?></p>
                   <div>
                     <div>
-                      <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" ">View</a>
+                      <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>">View</a>
                       <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" >Edit</a>
                     </div>
                   </div>
