@@ -72,9 +72,8 @@ var_dump($data['LocationID']);
             <div class="text">
               <h1>  <?php echo $data['Name'] ?>  <h1>
             </div>
-          <summary>Ingredienten</summary>
             <div class="text">
-              <p>  <?php echo $data['Price'] ?>  <p>
+              <p> € <?php echo $data['Price'] ?>  <p>
                 
               <p class="card" name="add"><button>Add to Cart
               <i class="fa fa-shopping-cart" style="font-size:30px;" aria-hidden="true"></i></button> </p>
