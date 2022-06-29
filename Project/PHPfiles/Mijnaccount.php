@@ -33,8 +33,6 @@ $result = $stmt->fetchAll();
 <td class="row2"><?php echo $data["UserName"]; ?> </td> <br>
 <td class="row2"><?php echo $data["UserSureName"]; ?> </td> <br>
 </tr>
-<a href="editBTN.php?id=<?php echo $data["LocationID"]; ?>">edit</a>
-<a href="delete.php?id=<?php echo $data["LocationID"]; ?>">delete</a> <br>
 <?php 
 }
 var_dump($data)
