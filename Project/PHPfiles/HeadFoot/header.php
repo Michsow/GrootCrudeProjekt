@@ -27,6 +27,9 @@
             <div class="about-us">
                 <button class="button"  onclick="document.location='AboutUs.php'">About Us</button>
             </div>
+            <div class="contact">
+                <button class="button"  onclick="document.location='Contact.php'">Contact</button>
+            </div>
         </nav>
         <div class="Login">
             <a href="#LogIn"><?php include "PHPfiles/Form.php" ?></a>
