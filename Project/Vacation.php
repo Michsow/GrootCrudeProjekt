@@ -6,11 +6,45 @@
     </div>
     <div class="search">
             <div class="Search_block">
-              <form method="post"> 
-              <label>Search</label>
+              <form method="post" class="form"> 
               <input type="text" name="search">
               <input type="submit" name="submit" class = "button">
             </div>
+            <?php
+$con = new PDO("mysql:host=localhost;dbname=tritacosql",'root','');
+
+if (isset($_POST["submit"])) {
+	$str = $_POST["search"];
+	$sth = $con->prepare("SELECT * FROM `infolocaties` WHERE Name = '$str'");
+
+	$sth->setFetchMode(PDO:: FETCH_OBJ);
+	$sth -> execute();
+
+	if($row = $sth->fetch())
+	{
+		?>
+		<br>
+		<table>
+			<tr>
+				<th>Your Results: </th>
+			</tr>
+			<tr>
+				<td><?php echo $row->Name; ?></td>
+			</tr>
+
+		</table>
+<?php 
+	}
+		
+		
+		else {
+			echo "Name Does not exist";
+		}
+
+
+  }
+
+?>
         </div>
     <div class="break2">
     </div>  
@@ -41,40 +75,3 @@
           </div>
     </main>
     <?php include "PHPfiles/HeadFoot/footer.php" ?>
-<?php
-$con = new PDO("mysql:host=localhost;dbname=tritacosql",'root','');
-
-if (isset($_POST["submit"])) {
-	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `infolocaties` WHERE Name = '$str'");
-
-	$sth->setFetchMode(PDO:: FETCH_OBJ);
-	$sth -> execute();
-
-	if($row = $sth->fetch())
-	{
-		?>
-		<br><br><br>
-		<table>
-			<tr>
-				<th>Name</th>
-        <th>About</th>
-			</tr>
-			<tr>
-				<td><?php echo $row->Name; ?></td>
-        <td><?php echo $row->About;?></td>
-			</tr>
-
-		</table>
-<?php 
-	}
-		
-		
-		else {
-			echo "Name Does not exist";
-		}
-
-
-  }
-
-?>
