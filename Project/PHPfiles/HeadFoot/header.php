@@ -35,14 +35,14 @@
             <a href="#LogIn"><?php include "PHPfiles/Form.php" ?></a>
             </div>
             <div class="about-us">
-              <button><a href="PHPfiles/Logout.php">Logout</a></button>
+              <button><a href="PHPfiles/Logout.php" class="text">Logout</a></button>
             </div>
             <a href="PHPfiles/Mijnaccount.php"> <button> Mijn account </button> </a>
         <div class="shoppingCartDiv">
             
         <i class="fa fa-plane" style="font-size:68px;" aria-hidden="true"></i>
         <div class="break4"></div>
-        <button class="shoppingCartButton" style="width:100px;"><a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/PHPfiles/bookedFlights.php">Booked flights</a></button>
+        <button class="shoppingCartButton" style="width:100px;"><a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/PHPfiles/bookedFlights.php" class="text">Booked flights</a></button>
         </div>
 
     </header>

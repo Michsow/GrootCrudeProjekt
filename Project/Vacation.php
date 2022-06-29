@@ -64,9 +64,9 @@ if (isset($_POST["submit"])) {
                   <p ><?php echo $row ['Name'];?></p>
                   <p >€<?php echo $row ['Price'];?></p>
                   <div>
-                    <div>
-                      <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>">View</a>
-                      <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" >Edit</a>
+                    <div class="view-edit">
+                    <button>  <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" class="text">View</a> </button>
+                    <button>  <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" class="text" >Edit</a> </button>
                     </div>
                   </div>
                 </div>

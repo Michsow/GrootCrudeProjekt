@@ -387,3 +387,11 @@ span.psw {
   text-decoration: none;
   color:#2d819d
 }
+.view-edit {
+    height: 46px;
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
