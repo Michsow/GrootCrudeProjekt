@@ -19,7 +19,7 @@
       <div><?php echo $row ['Name'];?></div>
         <img src="img/<?php echo $row ['Photo'];?>" style="width:100%">
         <div>€<?php echo $row ['Price'];?></div>
-        <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" >geïnteresseerd? kijk hier!</a>
+        <button> <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" class="text" >geïnteresseerd? kijk hier!</a></button>
       </div>
     <?php 
     }

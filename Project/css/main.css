@@ -5,7 +5,7 @@
 body {
   height: 1945px;
   width: 100%;
-  background-color: #FBF8EE;
+  background-color: White;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,7 +15,7 @@ body {
 header{
     height: 94px;
     width: 80%;
-    background-color: #FBF8EE;
+    background-color: White;
     display: flex;
     align-items: center;
 }
@@ -31,14 +31,14 @@ header{
 nav {
     height: 94px;
     width: 60%;
-    background-color: #FBF8EE;
+    background-color: White;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
 }
 .button {
     position: relative;
-    background-color: #FBF8EE;
+    background-color: White;
     border: none;
     font-size: 14px;
     color: #2d819d;
@@ -64,7 +64,7 @@ button:hover {
 .Search-block{
     height: 60px;
     width: 100%;
-    background-color: #FBF8EE;
+    background-color: White;
     display: flex;
 
 }
@@ -75,7 +75,7 @@ button:hover {
 }
 #sumbit{
     position: relative;
-    background-color: #FBF8EE;
+    background-color: White;
     border: none;
     font-size: 14px;
     color: #2d819d;
@@ -190,7 +190,7 @@ input[type=text], input[type=password] {
 
 /* Set a style for all buttons */
 button {
-  background-color: #FBF8EE;
+  background-color: white;
   color: #2d819d;
   padding: 14px 20px;
   margin: 8px 0;
@@ -310,7 +310,7 @@ span.psw {
 }
 .shoppingCartButton{
     position: relative;
-    background-color: #FBF8EE;
+    background-color: White;
     border: none;
     font-size: 14px;
     color: #2d819d;
@@ -382,4 +382,8 @@ span.psw {
 .hmmm {
   height: 415px;
   width: 50%;
+}
+.text {
+  text-decoration: none;
+  color:#2d819d
 }
