@@ -1,7 +1,7 @@
 
 <?php include "PHPfiles/connection.php" ?>
 <?php include "PHPfiles/HeadFoot/header.php" ?>
-  <main class="main2">
+  <main>
     <div class="break">           
     </div>
     <div class="search">
@@ -56,7 +56,7 @@ if (isset($_POST["submit"])) {
                     //echo $row ['titel']. " " .$row['artiest']. "<br >/\n";
                   //}
             ?>
-            <div>
+            <div class="hmmm">
               <div class="centering">
                 <img  src="img/<?php echo $row ['Photo'];?>" alt="Card image cap" class="img-vacation">
                 <div>

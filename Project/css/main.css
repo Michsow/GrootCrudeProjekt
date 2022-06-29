@@ -88,7 +88,7 @@ button:hover {
     cursor: pointer;
 }
 main{
-  height: 600px;
+  height: 1770px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -156,7 +156,7 @@ main{
       
   }
   .main-vacation{
-    height: 482px;
+    height: 1200px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -378,4 +378,8 @@ span.psw {
   display: flex;
   align-content: space-around;
   align-items: center;
+}
+.hmmm {
+  height: 415px;
+  width: 50%;
 }
