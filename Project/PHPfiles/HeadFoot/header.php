@@ -40,18 +40,9 @@
             <a href="PHPfiles/Mijnaccount.php"> <button> Mijn account </button> </a>
         <div class="shoppingCartDiv">
             
-        <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
+        <i class="fa fa-plane" style="font-size:68px;" aria-hidden="true"></i>
         <div class="break4"></div>
-        <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
-        <?php
-        if(isset($_SESSION['cart'])){
-            $count = count($_SESSION['cart']);
-            echo "<span id=\'cart_count\'>$count</span>";
-        } else{
-            echo "<span id=\'cart_count\'>0</span>";
-        }
-        ?>
-        </button>
+        <button class="shoppingCartButton" style="width:100px;"><a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/PHPfiles/bookedFlights.php">Booked flights</a></button>
         </div>
 
     </header>
