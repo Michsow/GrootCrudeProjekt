@@ -34,7 +34,7 @@
             <div class="about-us">
               <button><a href="PHPfiles/Logout.php">Logout</a></button>
             </div>
-            
+            <a href="PHPfiles/Mijnaccount.php"> <button> Mijn account </button> </a>
         <div class="shoppingCartDiv">
             
         <i class="fa fa-shopping-cart" style="font-size:68px;" aria-hidden="true"></i>
@@ -49,6 +49,6 @@
         }
         ?>
         </button>
-        
         </div>
+
     </header>
