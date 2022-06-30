@@ -1,7 +1,7 @@
 
 <?php include "PHPfiles/connection.php" ?>
 <?php include "PHPfiles/HeadFoot/header.php" ?>
-  <main>
+  <main class="main2">
     <div class="break">           
     </div>
     <div class="search">
@@ -57,16 +57,16 @@ if (isset($_POST["submit"])) {
                     //echo $row ['titel']. " " .$row['artiest']. "<br >/\n";
                   //}
             ?>
-            <div class="hmmm">
+            <div>
               <div class="centering">
                 <img  src="img/<?php echo $row ['Photo'];?>" alt="Card image cap" class="img-vacation">
                 <div>
                   <p ><?php echo $row ['Name'];?></p>
                   <p >€<?php echo $row ['Price'];?></p>
                   <div>
-                    <div class="view-edit">
-                    <button>  <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>" class="text">View</a> </button>
-                    <button>  <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" class="text" >Edit</a> </button>
+                    <div>
+                      <a href="PHPfiles/MoreInfoFlight.php?p=<?php echo $row ['LocationID'];?>">View</a>
+                      <a href="PHPfiles/admin1.php?p=<?php echo $row ['LocationID'];?>" type="button" >Edit</a>
                     </div>
                   </div>
                 </div>

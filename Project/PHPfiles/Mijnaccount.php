@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-     
+
 <?php
 include ('connection.php');
 if(isset($_SESSION['UserName'])) {
@@ -24,19 +24,29 @@ $result = $stmt->fetchAll();
 
 ?>
 
-<?php $data = $conn->query("SELECT * FROM users WHERE UserID")->fetchall();
- { ?><br>
 
-<tr class="table1">
-<td class="row1"><?php echo $data["UserName"]; ?> </td> <br>
-<td class="row2"><?php echo $data["Email"]; ?> </td> <br>
-<td class="row2"><?php echo $data["UserName"]; ?> </td> <br>
-<td class="row2"><?php echo $data["UserSureName"]; ?> </td> <br>
-</tr>
-<?php 
-}
-var_dump($data)
-?>
+<?php if($result['UserName'] == '%admin%')?>
+
+<div class="row"> <?php
+$data = $conn->query("SELECT * FROM users")->fetchAll();
+
+foreach ($data as $row) { ?>
+    <table class="Table1Users">
+        <tr>
+            <th> Username </th>
+            <th> UserSureName  </th>
+            <th> Email </th>
+        </tr>
+        <tr>
+            <td> <?php echo $row['UserName']."<br />\n";?>  </td>
+            <td> <?php echo $row['UserSureName']."<br />\n"; ?>   </td>
+            <td> <?php echo $row['Email']."<br />\n"; ?>   </td>
+        </tr>
+
+    </table>
+</div>
+<?php } ?>
+
 <?php 
 $sql = "SELECT * FROM users where UserID = ?";
 $stmt = $conn->prepare($sql);
@@ -46,7 +56,7 @@ $result = $stmt->fetch();
 
 if(isset($_POST["submit"])){
     $sql = "UPDATE user SET
-                 UserID = :UserID,
+              UserID = :UserID,
               UserName = :UserName, 
               UserSureName = :UserSureName,
               WHERE Email = :Email,
