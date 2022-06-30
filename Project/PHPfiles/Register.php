@@ -23,7 +23,9 @@ if(isset($_POST['submit'])){
     header("Location: ../index.php");
 }
 ?>
-<form action="" method="post">
+
+<main>
+  <form action="" method="post">
   <div class="container">
     <h1>Register</h1>
     <p>Please fill in this form to create an account.</p>
@@ -42,14 +44,16 @@ if(isset($_POST['submit'])){
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
     <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-
+  <div class="buttons">
     <button type="submit" class="registerbtn" name="submit">Register</button>
-    <a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/index.php" class="registerbtn">Go back to main page.</a>
+    <a href="http:../index.php" class="registerbtn2">Go back to main page.</a>
+  </div>
   </div>
 
   
 
 </form>
+</main>
 
 </body>
 </html>

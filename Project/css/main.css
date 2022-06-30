@@ -11,6 +11,7 @@ body {
   justify-content: flex-start;
   align-content: stretch;
   align-items: center;
+  font-family:"Raleway", sans-serif;
 }
 header{
     height: 94px;
@@ -208,7 +209,7 @@ button:hover {
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
-  background-color: #EB7E80;
+  background-color: White;
   color: #2d819d;
 }
 .cancelbtn:hover{
@@ -341,9 +342,6 @@ span.psw {
   width: 3%;
   height: 94px;
 }
-.text2137{
-  text-decoration:none;  
-}
 .main-aboutus{
   height: 1370px;
   width: 80%;
@@ -394,4 +392,102 @@ span.psw {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+}
+
+div.elem-group {
+  margin: 40px 0;
+}
+
+label {
+  display: block;
+  font-family: 'Aleo';
+  padding-bottom: 4px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Aleo';
+  width: 500px;
+  padding: 8px;
+}
+
+textarea {
+  height: 250px;
+}
+.container2{
+  height: 700px;
+  width:500px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+  padding:2em;
+  background-color:#fff;
+  text-align: center;
+  color: #d54753;
+}
+.form-group{
+  margin-bottom:1.5em;
+  transition:all .3s;
+}
+.form-label{
+  font-size:.75em;
+  color:var(--font-color);
+  display:block;
+  opacity:0;
+  transition: all .3s;
+  transform:translateX(-50px);
+}
+.form-control{
+  box-shadow:none;
+  border-radius:0;
+  border-color:#ccc;
+  border-style:none none solid none;
+  width:100%;
+  font-size:1.25em;
+  transition:all .6s;
+}
+.form-control::placeholder{
+  color:#aaa;
+}
+.form-control:focus{
+  box-shadow:none;
+  border-color:var(--font-hover-color);
+  outline:none;
+}
+.form-group:focus-within{
+  transform:scale(1.1,1.1);
+}
+
+.form-control:invalid:focus{
+  border-color:#EB7E80;
+}
+.form-control:valid:focus{
+  border-color: #d54753;
+}
+
+.btn{
+  background: 0 0 #fff;
+  border:1px solid #aaa;
+  border-radius:3px;
+  color:var(--font-color);
+  font-size:1em;
+  padding:10 50px;
+  text-transform:uppercase;
+}
+.btn:hover{
+  border-color:var(--font-hover-color);
+  color:var(--font-hover-color);
+}
+textarea{
+  resize:none;
+}
+
+
+
+.focused > .form-label{
+  opacity:1;
+  transform:translateX(0px);
+
 }
