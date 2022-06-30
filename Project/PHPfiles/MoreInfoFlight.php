@@ -46,16 +46,7 @@ var_dump($data['LocationID']);
             
         <i class="fa-solid fa-plane-departure" style="font-size:68px;" aria-hidden="true"></i>
  
-        <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">Chosen Flights
-        <?php
-        if(isset($_SESSION['cart'])){
-            $count = count($_SESSION['cart']);
-            echo "<span id=\'cart_count\'>$count</span>";
-        } else{
-            echo "<span id=\'cart_count\'>0</span>";
-        }
-        ?>
-        </button>
+        <button class="shoppingCartButton" style="width:100px;" href="PHPfiles/cart.php">booked flights</button>
         
         </div>
     </header>
@@ -75,7 +66,7 @@ var_dump($data['LocationID']);
             <div class="text">
               <p> € <?php echo $data['Price'] ?>  <p>
                 
-              <p class="card" name="add"><button>Add to Cart
+              <p class="card" name="add"><button>Book a flight
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </p>
             </div>
         </div>
