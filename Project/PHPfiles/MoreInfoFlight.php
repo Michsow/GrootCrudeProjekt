@@ -66,9 +66,9 @@ var_dump($data['LocationID']);
             <div class="text">
               <p> € <?php echo $data['Price'] ?>  <p>
                 
-              <p class="card" <?php include "booking.php" ?> name="add"><button onclick="document.getElementById('booking').style.display='block'" >Book a flight 
+              <a href="#booking" class="card" name="add"><?php include "booking.php" ?><button onclick="document.getElementById('booking').style.display='block'" >Book a flight 
                 
-              <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </p>
+              <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
             </div>
         </div>
   </div>
@@ -79,7 +79,7 @@ var_dump($data['LocationID']);
 
     <script src="../js/main.js"> </script>
     <script scr="../js/JavaForm.js"></script>
-    <script scr="../js/onclick.js"></script>
+    <script scr="../js/"></script>
 </footer>
 
 </body>
