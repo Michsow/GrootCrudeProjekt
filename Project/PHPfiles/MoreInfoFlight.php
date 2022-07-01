@@ -122,7 +122,8 @@ var_dump($data['LocationID']);
              <a> flight id: </a>
                   <?php 
                 $_GET['p'];
-                var_dump($_GET);
+                echo $_GET['p']
+                
                   ?>
 
               <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
