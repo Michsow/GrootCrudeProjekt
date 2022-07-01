@@ -31,7 +31,7 @@
 
         function saveToTheDB() {
             $.ajax({
-               url: "index.php",
+               url: "MoreInfoFlight.php",
                method: "POST",
                dataType: 'json',
                data: {
