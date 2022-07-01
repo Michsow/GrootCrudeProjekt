@@ -95,9 +95,9 @@ var_dump($data['LocationID']);
             <div class="text">
               <p> € <?php echo $data['Price'] ?>  <p>
                 
-              <p class="card" <?php include "booking.php" ?> name="add"><button onclick="document.getElementById('booking').style.display='block'" >Book a flight 
+              <a href="#booking" class="card" name="add"><?php include "booking.php" ?><button onclick="document.getElementById('booking').style.display='block'" >Book a flight 
                 
-              <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </p>
+              <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
             </div>
         </div>
   </div>
@@ -119,6 +119,8 @@ var_dump($data['LocationID']);
     <script scr="../js/onclick.js"></script>
     <script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <script src="../js/rating.js"></script>
+    <script scr="../js/"></script>
+
 </footer>
 
 </body>
