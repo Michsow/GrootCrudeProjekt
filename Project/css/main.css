@@ -491,3 +491,10 @@ textarea{
   transform:translateX(0px);
 
 }
+.container3 {
+  padding: 60px;;
+  color: white;
+  background-color: #EB7E80;
+  align-items: center;
+  border-radius: 6px;
+}

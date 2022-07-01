@@ -1,6 +1,34 @@
 
 <!doctype html>
 <html lang="en">
+<?php
+    $conn = new mysqli('localhost', 'root', '', 'tritacosql');
+
+    if (isset($_POST['save'])) {
+        $uID = $conn->real_escape_string($_POST['uID']);
+        $ratedIndex = $conn->real_escape_string($_POST['ratedIndex']);
+        $ratedIndex++;
+
+        if (!$uID) {
+            $conn->query("INSERT INTO stars (rateIndex) VALUES ('$ratedIndex')");
+            $sql = $conn->query("SELECT id FROM stars ORDER BY id DESC LIMIT 1");
+            $uData = $sql->fetch_assoc();
+            $uID = $uData['id'];
+        } else
+            $conn->query("UPDATE stars SET rateIndex='$ratedIndex' WHERE id='$uID'");
+
+        exit(json_encode(array('id' => $uID)));
+    }
+
+    $sql = $conn->query("SELECT id FROM stars");
+    $numR = $sql->num_rows;
+
+    $sql = $conn->query("SELECT SUM(rateIndex) AS total FROM stars");
+    $rData = $sql->fetch_array();
+    $total = $rData['total'];
+
+    $avg = $total / $numR;
+?>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,6 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
 <?php include "connection.php"?>
@@ -72,14 +101,24 @@ var_dump($data['LocationID']);
             </div>
         </div>
   </div>
-
+  <div class="container3">
+        <i class="fa fa-star fa-2x" data-index="0"></i>
+        <i class="fa fa-star fa-2x" data-index="1"></i>
+        <i class="fa fa-star fa-2x" data-index="2"></i>
+        <i class="fa fa-star fa-2x" data-index="3"></i>
+        <i class="fa fa-star fa-2x" data-index="4"></i>
+        <br><br>
+        <?php echo round($avg,2) ?>
+    </div>
 </main>
 <footer>
 
 
-    <script src="../js/main.js"> </script>
+    <script src="../js/main.js"></script>
     <script scr="../js/JavaForm.js"></script>
     <script scr="../js/onclick.js"></script>
+    <script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <script src="../js/rating.js"></script>
 </footer>
 
 </body>
