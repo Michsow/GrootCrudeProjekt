@@ -383,7 +383,13 @@ span.psw {
 }
 .text {
   text-decoration: none;
-  color:#2d819d
+  color:#2d819d;
+  font-family:"Raleway", sans-serif;
+}
+.text2 {
+  text-decoration: none;
+  color:#000;
+  font-family:"Raleway", sans-serif;
 }
 .view-edit {
     height: 46px;

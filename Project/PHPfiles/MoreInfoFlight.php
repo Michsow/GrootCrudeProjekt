@@ -109,14 +109,14 @@ var_dump($data['LocationID']);
                
               ?>
             <form method="post">
-              <label for="uname"><b>Username and surname</b></label>
-              <input type="text" placeholder="Enter Username & surname:" name="name" id="name" >
+              <label for="uname"><b class="text2">Username and surname</b></label>
+              <input type="text" placeholder="Enter Username & surname:" name="name" id="name" class="text">
 
-             <label for="psw"><b>Address</b></label>
-             <input type="text" placeholder="Enter address" name="address" id="address" >
+             <label for="psw"><b class="text2">Address</b></label>
+             <input type="text" placeholder="Enter address" name="address" id="address" class="text">
 
-             <label for="psw"><b>Contact</b></label>
-             <input type="text" placeholder="Enter Phone number" name="contact" id="contact" >
+             <label for="psw"><b class="text2">Contact</b></label>
+             <input type="text" placeholder="Enter Phone number" name="contact" id="contact" class="text">
 
              <a> flight id: </a>
                   <?php 
@@ -126,21 +126,20 @@ var_dump($data['LocationID']);
                   ?>
 
               <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
-
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
-            </form>
-            </div>
+        </form>
+              </div>
         </div>
   </div>
   <div class="container3">
-        <i class="fa fa-star fa-2x" data-index="0"></i>
-        <i class="fa fa-star fa-2x" data-index="1"></i>
-        <i class="fa fa-star fa-2x" data-index="2"></i>
-        <i class="fa fa-star fa-2x" data-index="3"></i>
-        <i class="fa fa-star fa-2x" data-index="4"></i>
-        <br><br>
-        <?php echo round($avg,2) ?>
-    </div>
+  <i class="fa fa-star fa-2x" data-index="0"></i>
+  <i class="fa fa-star fa-2x" data-index="1"></i>
+  <i class="fa fa-star fa-2x" data-index="2"></i>
+  <i class="fa fa-star fa-2x" data-index="3"></i>
+  <i class="fa fa-star fa-2x" data-index="4"></i>
+  <br><br>
+  <?php echo round($avg,2) ?>
+</div>
 </main>
 <footer>
 
