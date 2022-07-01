@@ -11,7 +11,7 @@ var_dump($_POST);
 if(isset($_POST['submit'])){
 
 
-    $sth = $conn->prepare("INSERT INTO users (UserName, E_mail, UserPassword ) 
+    $sth = $conn->prepare("INSERT INTO users (UserName, Email, UserPassword ) 
                             VALUES (:UserName, :Email, :UserPassword )");
 
     $sth->bindParam(':UserName', $_POST['UserName']);
