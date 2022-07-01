@@ -98,16 +98,15 @@ var_dump($data['LocationID']);
     var_dump($_POST);
               if(isset($_POST['submit'])){
                   $sth = $conn->prepare("INSERT into booked_flight (name, address, contact)
-                  VALUES (:name, :address, :contact, :flight_id)");
+                  VALUES (:name, :address, :contact,)");
 
                         $sth->bindParam(':name', $_POST['name']);
                         $sth->bindParam(':address', $_POST['address']);
                         $sth->bindParam(':contact', $_POST['contact']);
-                        $sth->bindParam(':flight_id', $_GET['flight_id']);
                         $sth->execute();
                         header("Location:../index.php");
                 }
-
+               
               ?>
             <form method="post">
               <label for="uname"><b>Username and surname</b></label>
@@ -123,7 +122,7 @@ var_dump($data['LocationID']);
                   <?php 
                 $_GET['p'];
                 echo $_GET['p']
-                
+
                   ?>
 
               <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
