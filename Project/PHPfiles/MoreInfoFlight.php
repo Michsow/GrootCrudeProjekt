@@ -99,6 +99,7 @@ var_dump($data['LocationID']);
               if(isset($_POST['submit'])){
                   $sth = $conn->prepare("INSERT into booked_flight (name, address, contact)
                   VALUES (:name, :address, :contact, :flight_id)");
+<<<<<<< Updated upstream
 
                         $sth->bindParam(':name', $_POST['name']);
                         $sth->bindParam(':address', $_POST['address']);
@@ -128,20 +129,50 @@ var_dump($data['LocationID']);
 
               <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
 
+=======
+                
+              $sth->bindParam(':name', $_POST['name']);
+              $sth->bindParam(':address', $_POST['address']);
+              $sth->bindParam(':contact', $_POST['contact']);
+              $sth->bindParam(':flight_id', $_GET['flight_id']);
+              $sth->execute();
+              header("Location:../index.php");
+      }
+
+    ?>
+  <form method="post"class="text">
+    <label for="uname" class="text2"><b>Username and surname</b></label>
+    <input type="text" placeholder="Enter Username & surname:" name="name" id="name" class="text">
+
+   <label for="psw"class="text2"><b>Address</b></label>
+   <input type="text" placeholder="Enter address" name="address" id="address" class="text">
+
+   <label for="psw"class="text2"><b>Contact</b></label>
+   <input type="text" placeholder="Enter Phone number" name="contact" id="contact" class="text">
+
+   <a> flight id: </a>
+        <?php 
+      $_GET['p'];
+      var_dump($_GET);
+        ?>
+
+    <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
+                
+>>>>>>> Stashed changes
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
-            </form>
-            </div>
+        </form>
+              </div>
         </div>
   </div>
   <div class="container3">
-        <i class="fa fa-star fa-2x" data-index="0"></i>
-        <i class="fa fa-star fa-2x" data-index="1"></i>
-        <i class="fa fa-star fa-2x" data-index="2"></i>
-        <i class="fa fa-star fa-2x" data-index="3"></i>
-        <i class="fa fa-star fa-2x" data-index="4"></i>
-        <br><br>
-        <?php echo round($avg,2) ?>
-    </div>
+  <i class="fa fa-star fa-2x" data-index="0"></i>
+  <i class="fa fa-star fa-2x" data-index="1"></i>
+  <i class="fa fa-star fa-2x" data-index="2"></i>
+  <i class="fa fa-star fa-2x" data-index="3"></i>
+  <i class="fa fa-star fa-2x" data-index="4"></i>
+  <br><br>
+  <?php echo round($avg,2) ?>
+</div>
 </main>
 <footer>
 
