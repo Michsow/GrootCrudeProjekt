@@ -3,7 +3,7 @@ $con = new PDO("mysql:host=localhost;dbname=tritacosql",'root','');
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `infolocaties` WHERE Name like '%$str%'");
+	$sth = $con->prepare("SELECT * FROM `infolocaties` WHERE Name like '$str'");
 
 	$sth->setFetchMode(PDO:: FETCH_OBJ);
 	$sth -> execute();
@@ -21,7 +21,6 @@ if (isset($_POST["submit"])) {
 				<td><?php echo $row->Name; ?></td>
                 <td><?php echo $row->About;?></td>
 			</tr>
-
 		</table>
 <?php 
 	}	
