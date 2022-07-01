@@ -98,11 +98,12 @@ var_dump($data['LocationID']);
     var_dump($_POST);
               if(isset($_POST['submit'])){
                   $sth = $conn->prepare("INSERT into booked_flight (name, address, contact)
-                  VALUES (:name, :address, :contact)");
+                  VALUES (:name, :address, :contact, :flight_id)");
 
                         $sth->bindParam(':name', $_POST['name']);
                         $sth->bindParam(':address', $_POST['address']);
                         $sth->bindParam(':contact', $_POST['contact']);
+                        $sth->bindParam(':flight_id', $_GET['flight_id']);
                         $sth->execute();
                         header("Location:../index.php");
                 }
@@ -117,8 +118,15 @@ var_dump($data['LocationID']);
 
              <label for="psw"><b>Contact</b></label>
              <input type="text" placeholder="Enter Phone number" name="contact" id="contact" >
-              <a class="card" name="submit"><button name="submit" type="submit">Book a flight 
-                
+
+             <a> flight id: </a>
+                  <?php 
+                $_GET['p'];
+                var_dump($_GET);
+                  ?>
+
+              <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
+
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
             </form>
             </div>
