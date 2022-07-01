@@ -25,7 +25,7 @@ $result = $stmt->fetchAll();
 ?>
 
 
-<?php if($result['UserName'] == '%admin%')?>
+<?php if($result['UserName'] == '%admin%'){?>
 
 <div class="row"> <?php
 $data = $conn->query("SELECT * FROM users")->fetchAll();
@@ -46,7 +46,10 @@ foreach ($data as $row) { ?>
     </table>
 </div>
 <?php } ?>
+<?php } else {?>
 
+
+    <?php } ?>
 <?php 
 $sql = "SELECT * FROM users where UserID = ?";
 $stmt = $conn->prepare($sql);
