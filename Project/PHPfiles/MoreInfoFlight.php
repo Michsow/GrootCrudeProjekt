@@ -94,10 +94,33 @@ var_dump($data['LocationID']);
             </div>
             <div class="text">
               <p> € <?php echo $data['Price'] ?>  <p>
-                
-              <a href="#booking" class="card" name="add"><?php include "booking.php" ?><button onclick="document.getElementById('booking').style.display='block'" >Book a flight 
+              <?php 
+    var_dump($_POST);
+              if(isset($_POST['submit'])){
+                  $sth = $conn->prepare("INSERT into booked_flight (name, address, contact)
+                  VALUES (:name, :address, :contact)");
+
+                        $sth->bindParam(':name', $_POST['name']);
+                        $sth->bindParam(':address', $_POST['address']);
+                        $sth->bindParam(':contact', $_POST['contact']);
+                        $sth->execute();
+                        header("Location:../index.php");
+                }
+
+              ?>
+            <form method="post">
+              <label for="uname"><b>Username and surname</b></label>
+              <input type="text" placeholder="Enter Username & surname:" name="name" id="name" >
+
+             <label for="psw"><b>Address</b></label>
+             <input type="text" placeholder="Enter address" name="address" id="address" >
+
+             <label for="psw"><b>Contact</b></label>
+             <input type="text" placeholder="Enter Phone number" name="contact" id="contact" >
+              <a class="card" name="submit"><button name="submit" type="submit">Book a flight 
                 
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
+            </form>
             </div>
         </div>
   </div>
