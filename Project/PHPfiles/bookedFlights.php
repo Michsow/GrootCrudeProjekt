@@ -7,8 +7,21 @@
     <title>TriTaco</title>
 </head>
 <body>
-    <?php include "connection.php" ?>
-    <?php  ?>
+
+
+<?php 
+include "connection.php";
+$sql = "SELECT * FROM users where UserName = ?";
+$stmt = $conn->prepare($sql);
+$stmt->execute([$_SESSION['UserName']]);
+$result = $stmt->fetch();
+echo $_SESSION['UserName'];
+
+if( $_SESSION['UserName'] = "name"){
+    
+}
+?>
+
 
 </body>
 </html>
