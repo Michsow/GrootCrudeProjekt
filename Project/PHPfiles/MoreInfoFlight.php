@@ -97,20 +97,21 @@ var_dump($data['LocationID']);
               <?php 
     var_dump($_POST);
               if(isset($_POST['submit'])){
-                  $sth = $conn->prepare("INSERT into booked_flight (name, address, contact)
-                  VALUES (:name, :address, :contact,)");
+                  $sth = $conn->prepare("INSERT into booked_flight (name, address, contact, flight_id)
+                  VALUES (:name, :address, :contact, :flight_id)");
 
                         $sth->bindParam(':name', $_POST['name']);
                         $sth->bindParam(':address', $_POST['address']);
                         $sth->bindParam(':contact', $_POST['contact']);
+                        $sth->bindParam(':flight_id', $_POST['flight_id']);
                         $sth->execute();
                         header("Location:../index.php");
                 }
                
               ?>
             <form method="post">
-              <label for="uname"><b class="text2">Username and surname</b></label>
-              <input type="text" placeholder="Enter Username & surname:" name="name" id="name" class="text">
+              <label for="uname"><b class="text2">Username</b></label>
+              <input type="text" placeholder="Enter Username:" name="name" id="name" class="text">
 
              <label for="psw"><b class="text2">Address</b></label>
              <input type="text" placeholder="Enter address" name="address" id="address" class="text">
@@ -118,14 +119,12 @@ var_dump($data['LocationID']);
              <label for="psw"><b class="text2">Contact</b></label>
              <input type="text" placeholder="Enter Phone number" name="contact" id="contact" class="text">
 
-             <a> flight id: </a>
+             flight id: <input type="text" value="<?php echo $_GET['p']?>" name="flight_id" readonly />
                   <?php 
-                $_GET['p'];
-                echo $_GET['p']
-
+                var_dump($_GET['p'])
                   ?>
 
-              <a class="card" name="submit"><button name="submit" type="submit">Book a flight    
+              <a class="card" name="submit"><button action="PHPfiles/bookedFlights.php" name="submit" type="submit">Book a flight    
               <i class="fa-solid fa-book-bookmark" style="font-size:30px;" aria-hidden="true"></i></button> </a>
         </form>
               </div>

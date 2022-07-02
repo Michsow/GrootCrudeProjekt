@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include "connection.php" ?>
-
+    <?php  ?>
 
 </body>
 </html>

@@ -42,7 +42,7 @@
             
         <i class="fa-solid fa-plane-departure" style="font-size:68px;" aria-hidden="true"></i>
         <div class="break4"></div>
-        <button class="shoppingCartButton" style="width:100px;"><a href="http://localhost/ProjectCrudeGroot/Project/GrootCrudeProjekt/Project/PHPfiles/bookedFlights.php" class="text">Booked flights</a></button>
+        <button class="shoppingCartButton" style="width:100px;"><a href="PHPfiles/bookedFlights.php" class="text">Booked flights</a></button>
         </div>
 
     </header>
