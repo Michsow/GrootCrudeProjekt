@@ -48,7 +48,6 @@ foreach ($results as $row) { ?>
 
     </table>
 </div>
-<a href="bookedFlightEdit.php?p=<?php echo $row ['flight_id'];?>" type="button" >Edit</a>
 <a href="deletebooking.php?p=<?php echo $row ['flight_id'];?>" type="button" >Delete</a>
 
 

@@ -12,6 +12,6 @@ if($_SESSION['loggedin'] == true){
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':id', $_GET['id']);
     $stmt->execute();
-    header('Location: admin1bookedflight.php');
+    header('Location: ../index.php');
 
 ?>
