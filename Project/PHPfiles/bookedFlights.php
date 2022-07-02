@@ -40,6 +40,7 @@ foreach ($results as $row) { ?>
             <th> contact </th>
         </tr>
         <tr>
+            <td> <?php echo $row['id']."<br />\n";?>  </td>
             <td> <?php echo $row['flight_id']."<br />\n";?>  </td>
             <td> <?php echo $row['name']."<br />\n"; ?>   </td>
             <td> <?php echo $row['address']."<br />\n"; ?>   </td>
@@ -48,7 +49,7 @@ foreach ($results as $row) { ?>
 
     </table>
 </div>
-<a href="deletebooking.php?p=<?php echo $row ['flight_id'];?>" type="button" >Delete</a>
+<a href="admin1bookedflight.php?p=<?php echo $row ['id'];?>" type="button" >Delete</a>
 
 
 
@@ -56,18 +57,18 @@ foreach ($results as $row) { ?>
 <?php } else {?>
     <?php 
     
-        $sql = "SELECT * FROM users where UserName = ?";
+        $sql = "SELECT * FROM booked_flight where name = ?";
         $stmt = $conn->prepare($sql);
-        $stmt->execute([$_SESSION['UserName']]);
+        $stmt->execute([$_SESSION['name']]);
         $result = $stmt->fetch();
 
     ?>
 
 <form action="#" method="post">
-        UserID:<?php var_dump($result['UserID']) ?> <input type="text" name="UserID" id="" value="<?php echo $result["UserID"] ?>"><br />
-        UserName: <?php var_dump($result['UserName']) ?><input type="text" name="UserName" id="" value="<?php echo $result["UserName"] ?>"><br />
-        UserSureName: <?php var_dump($result['UserSureName']) ?><input type="text" name="UserSureName" id="" value="<?php echo $result["UserSureName"] ?>"><br />
-        Email: <?php var_dump($result['Email']) ?><input type="text" name="Email" id="" value="<?php echo $result["Email"] ?>"><br />
+        flight number :<?php var_dump($result['flight_id']) ?> <input type="text" name="flight_id" id="" value="<?php echo $result["flight_id"] ?>"><br />
+        UserName: <?php var_dump($result['name']) ?><input type="text" name="name" id="" value="<?php echo $result["name"] ?>"><br />
+        UserSureName: <?php var_dump($result['address']) ?><input type="text" name="address" id="" value="<?php echo $result["address"] ?>"><br />
+        Email: <?php var_dump($result['contact']) ?><input type="text" name="contact" id="" value="<?php echo $result["contact"] ?>"><br />
 </form>
     <?php } ?>
 
